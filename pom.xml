@@ -30,7 +30,7 @@
 		</profile>
 	</profiles>
   <build>
-    <finalName>Helloworldwebapp-dev</finalName>
+    <finalName>Helloworldwebapp-dev-shrisha</finalName>
   </build>
   
 </project>
