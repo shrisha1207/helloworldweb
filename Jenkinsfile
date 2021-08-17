@@ -19,7 +19,7 @@ pipeline {
             }
         }
         stage('download from github') {
-            agent {label 'appserver'}
+            agent {label 'master'}
             steps {
                 checkout([$class: 'GitSCM', 
                     branches: [[name: '*/master']], 
@@ -30,7 +30,7 @@ pipeline {
             }
         }
         stage('Deploy') {
-            agent {label 'appserver'}
+            agent {label 'master'}
             steps {
                 sh 'cp target/*.war /opt/tomcat/webapps/'
                 sh 'sudo nohup /opt/tomcat/bin/startup.sh'
